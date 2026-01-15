@@ -45,6 +45,9 @@ public class manager_game : MonoBehaviour
     [SerializeField] AudioSource seSource;
     [SerializeField] AudioClip SEmove;
 
+    // ゲームモード取得
+    bool isCastleMode;
+
     /* ---初期設定--- */
 
 
@@ -58,6 +61,7 @@ public class manager_game : MonoBehaviour
     UI_ReticleController ui_ReticleCtr;
     UI_Promotion ui_Promotion;
     SkyboxAudio skyboxAudio;
+    UI_ShowGameInfo ui_showGameInfo;
     private manager_CPU cpu;
 
     /* ---game画面で使用されるスクリプト--- */
@@ -72,14 +76,14 @@ public class manager_game : MonoBehaviour
     void Start()
     {
         // game画面で使用される全てのスクリプトを取得
-        gameToEnd     = GetComponent<GameToEnd>();
-        boardCell     = GetComponent<BoardCell>();
-        piece_library = GetComponent<piece_Library>();
-        ui_ShowMove   = GetComponent<UI_ShowMove>();
-        ui_ReticleCtr = GetComponent<UI_ReticleController>();
-        ui_Promotion  = GetComponent<UI_Promotion>();
-        skyboxAudio   = GetComponent<SkyboxAudio>();
-
+        gameToEnd       = GetComponent<GameToEnd>();
+        boardCell       = GetComponent<BoardCell>();
+        piece_library   = GetComponent<piece_Library>();
+        ui_ShowMove     = GetComponent<UI_ShowMove>();
+        ui_ReticleCtr   = GetComponent<UI_ReticleController>();
+        ui_Promotion    = GetComponent<UI_Promotion>();
+        skyboxAudio     = GetComponent<SkyboxAudio>();
+        ui_showGameInfo = GetComponent<UI_ShowGameInfo>();
 
         // 各駒の個性を取得
         piece_Factory.Init(piece_library);
@@ -95,7 +99,7 @@ public class manager_game : MonoBehaviour
             Debug.Log("デバック用で開始");
 
         // ゲームモード取得
-        bool isCastleMode = title.IsCastleMode();
+        isCastleMode = title.IsCastleMode();
         Debug.Log("ゲームモード: " + (isDebugMode ? "籠城戦開始" : "クラシックモード"));
 
         // 難易度取得
@@ -138,6 +142,9 @@ public class manager_game : MonoBehaviour
             StartCPUTurn();
         }
 
+        // UI表示
+        ui_showGameInfo.ShowGameInfo(difficult, isCastleMode);
+
     }
 
 
@@ -146,10 +153,13 @@ public class manager_game : MonoBehaviour
     {
         UpdateGodCamView();
 
-        if (Keyboard.current.tabKey.wasPressedThisFrame)
+        if (isDebugMode)
         {
-            Debug.Log("Switch Turn");
-            SwitchTurn();
+            if (Keyboard.current.tabKey.wasPressedThisFrame)
+            {
+                Debug.Log("Switch Turn");
+                SwitchTurn();
+            }
         }
 
         // playerのターンでなければ何もしない

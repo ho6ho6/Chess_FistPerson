@@ -10,7 +10,7 @@ public class piece_Controller : MonoBehaviour
     public Camera pieceCam;
 
     [Header("Sensitive")]
-    private float sensitivity = 20.0f;
+    private float sensitivity = 80.0f;
     private float rotationX = 5f;
     private float minY = -60f;
     private float maxY = 60f;

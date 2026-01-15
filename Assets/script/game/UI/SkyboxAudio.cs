@@ -12,8 +12,8 @@ public class SkyboxAudio : MonoBehaviour
     [SerializeField] AudioClip bgmDayN;
     [SerializeField] AudioClip bgmNightN;
     [SerializeField] AudioClip bgmDayR;
-    //[SerializeField] AudioClip bgmNightR;
-    //[SerializeField] AudioClip bgmNightmare;
+    [SerializeField] AudioClip bgmNightR;
+    [SerializeField] AudioClip bgmNightmare;
 
     // 背景の状態を列挙
     public enum SkyType
@@ -67,13 +67,13 @@ public class SkyboxAudio : MonoBehaviour
             case SkyType.NightRare:
                 Debug.Log("レアな日(夜)が選択されました。");
                 RenderSettings.skybox = skyboxNightRare;
-                //bgmSource.clip = bgmNightR;
+                bgmSource.clip = bgmNightR;
                 break;
 
             case SkyType.Nightmare:
                 Debug.Log("最高難易度が選択されました。");
                 RenderSettings.skybox = skyboxNightmare;
-                //bgmSource.clip = bgmNightmare;
+                bgmSource.clip = bgmNightmare;
                 break;
         }
 

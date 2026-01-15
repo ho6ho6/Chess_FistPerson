@@ -26,7 +26,7 @@ public class title : MonoBehaviour
 
     void Start()
     {
-        count = 0;
+        count = 1;
     }
 
     void Update()
@@ -75,7 +75,7 @@ public class title : MonoBehaviour
         {
             count++;
             SelectDifficult(count);
-            if (count == 5) count = 0;
+            if (count == 4) count = 0;
         }
 
         // 左コントロールで別のモード
