@@ -5,7 +5,7 @@
 プレイヤーが操作するのは、チェスの駒ですが自駒の移動範囲内でしかプレイヤーは盤面を見ることが出来ません </br>
 
 # ゲーム画面
-![FPSChess_Debug](./img/Chess_Debug.png)
+![FirstPersonChessGame](./img/FirstPersonChessGame.png.png)
 
 ## ビルド/実行方法
 FPS_Chess_試作品.exe を実行する - UnityRoomにも投稿してあります </br>
