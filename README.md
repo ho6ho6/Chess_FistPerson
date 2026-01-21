@@ -3,6 +3,8 @@
 ## 概要
 全世界で人気のあるボードゲームのチェスをモチーフにしたゲームです </br>
 プレイヤーが操作するのは、チェスの駒ですが自駒の移動範囲内でしかプレイヤーは盤面を見ることが出来ません </br>
+旧作の一人称チェスを作り直しました </br>
+-> 以前のGithub URL: https://github.com/ho6ho6/ho66Games_FPSChess </br>
 
 ## ゲーム画面
 ![FirstPersonChessGame](./img/FirstPersonChessGame.png)
