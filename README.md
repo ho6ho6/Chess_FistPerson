@@ -14,6 +14,9 @@
 
 ![FirstPersonChessGame](./img/FirstPersonChessGame.png)
 
+## なぜUnity?
+個人開発で短期間にゲームロジックを実装することを重視し、C#によるスクリプト開発や豊富なドキュメントを活用できるUnityを採用しました。</br>
+特に、AIアルゴリズム（Minimax・αβ探索）の実装に集中するため、C#でゲームロジックを迅速に開発できるUnityを採用しました。</br>
 
 ### ビルド/実行方法
 FirstPersonChessSimulator.exe を実行する - UnityRoomにも投稿してあります </br>
