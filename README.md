@@ -12,6 +12,10 @@
 対戦相手にはAIを実装しており、Minimax法とαβ探索による思考アルゴリズムを用いて難易度を調整しています。</br>
 ゲームは開始から終了までプレイ可能で、BGM・効果音・3DモデルなどのアセットはSkyboxを除きすべて自作しています。</br>
 
+一人称チェス概要解説と内容確認を行えるYouTubeリンクです </br>
+[一人称チェス概要解説](https://youtu.be/TX8dBKSlUoM)</br>
+[一人称チェス内容確認](https://youtu.be/s0ZbeJykjSQ)</br>
+
 ![FirstPersonChessGame](./img/FirstPersonChessGame.png)
 
 ## なぜUnity?
